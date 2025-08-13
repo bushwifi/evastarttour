@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evestar Tours and Travels - Kenya's Premier Travel Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F9D423 100%);
+        }
+        
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F9D423 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .active-nav {
+            color: #D4AF37;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header/Navigation -->
+    <header class="bg-black text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center">
+                    <span class="text-black font-bold text-xl">ET</span>
+                </div>
+                <span class="text-xl font-bold gold-text-gradient">Evestar Tours</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-yellow-400 transition active-nav">Home</a>
+                <a href="#book" class="hover:text-yellow-400 transition">Book</a>
+                <a href="#packages" class="hover:text-yellow-400 transition">Packages</a>
+                <a href="#services" class="hover:text-yellow-400 transition">Services</a>
+                <a href="#gallery" class="hover:text-yellow-400 transition">Gallery</a>
+                <a href="#reviews" class="hover:text-yellow-400 transition">Reviews</a>
+                <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-yellow-400 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black py-4 px-4">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-yellow-400 transition">Home</a>
+                <a href="#book" class="hover:text-yellow-400 transition">Book</a>
+                <a href="#packages" class="hover:text-yellow-400 transition">Packages</a>
+                <a href="#services" class="hover:text-yellow-400 transition">Services</a>
+                <a href="#gallery" class="hover:text-yellow-400 transition">Gallery</a>
+                <a href="#reviews" class="hover:text-yellow-400 transition">Reviews</a>
+                <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Discover Kenya With <span class="gold-text-gradient">Evestar Tours</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Experience the magic of Kenya's wildlife, beaches, and culture with our expertly crafted tours and travel packages.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#book" class="bg-yellow-600 hover:bg-yellow-700 text-black font-bold py-3 px-8 rounded-full transition duration-300">Book Now</a>
+                <a href="#packages" class="bg-transparent border-2 border-yellow-600 hover:bg-yellow-600 hover:text-black text-yellow-600 font-bold py-3 px-8 rounded-full transition duration-300">Our Packages</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="book" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 gold-text-gradient">Book Your Adventure</h2>
+            
+            <div class="max-w-4xl mx-auto bg-gray-800 rounded-xl shadow-2xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-yellow-600 p-8 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-4 text-black">Why Book With Us?</h3>
+                        <ul class="space-y-3 text-black">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-2"></i>
+                                <span>Best price guarantee</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-2"></i>
+                                <span>24/7 customer support</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-2"></i>
+                                <span>Expert local guides</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-2"></i>
+                                <span>Flexible cancellation policy</span>
+                            </li>
+                        </ul>
+                        <div class="mt-8">
+                            <h4 class="font-bold text-black mb-2">Need Help?</h4>
+                            <p class="text-black mb-2"><i class="fas fa-phone mr-2"></i> +254 700 123456</p>
+                            <p class="text-black"><i class="fas fa-envelope mr-2"></i> bookings@evestartours.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8">
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block mb-1">Full Name</label>
+                                <input type="text" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            </div>
+                            <div>
+                                <label class="block mb-1">Email</label>
+                                <input type="email" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            </div>
+                            <div>
+                                <label class="block mb-1">Phone</label>
+                                <input type="tel" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            </div>
+                            <div>
+                                <label class="block mb-1">Tour Package</label>
+                                <select class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                    <option>Select a package</option>
+                                    <option>Safari Adventure</option>
+                                    <option>Beach Getaway</option>
+                                    <option>Cultural Tour</option>
+                                    <option>Mountain Trek</option>
+                                    <option>Custom Package</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block mb-1">Arrival Date</label>
+                                    <input type="date" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                </div>
+                                <div>
+                                    <label class="block mb-1">Departure Date</label>
+                                    <input type="date" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block mb-1">Special Requests</label>
+                                <textarea rows="3" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-yellow-600 hover:bg-yellow-700 text-black font-bold py-3 px-4 rounded transition duration-300">Submit Booking</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Our Popular Packages</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Explore our carefully curated selection of Kenya's most exciting travel experiences</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Package 1 -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="https://plus.unsplash.com/premium_photo-1664302640765-d88c94bd04b7?q=80&w=685&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Maasai Mara Safari" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Popular</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Maasai Mara Safari</h3>
+                            <div class="text-yellow-600 font-bold">$1,200</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">5 days exploring Kenya's most famous wildlife reserve with luxury tented accommodation</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Maasai Mara, Kenya</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="font-bold">4.9</span>
+                                <span class="text-gray-500 ml-1">(128 reviews)</span>
+                            </div>
+                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Diani Beach Retreat" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Diani Beach Retreat</h3>
+                            <div class="text-yellow-600 font-bold">$950</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">7 days of relaxation on Kenya's most beautiful white sand beaches</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Diani Beach, Kenya</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="font-bold">4.8</span>
+                                <span class="text-gray-500 ml-1">(96 reviews)</span>
+                            </div>
+                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1734521675504-8ab8dc380bbe?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mount Kenya Trek" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Adventure</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Mount Kenya Trek</h3>
+                            <div class="text-yellow-600 font-bold">$1,500</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">6 day challenging trek to Point Lenana with experienced guides</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Mount Kenya National Park</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="font-bold">4.7</span>
+                                <span class="text-gray-500 ml-1">(84 reviews)</span>
+                            </div>
+                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 4 -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1623745493572-ef78d94249f3?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lake Nakuru Safari" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Wildlife</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Lake Nakuru Safari</h3>
+                            <div class="text-yellow-600 font-bold">$900</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">3 days exploring the famous flamingo lake and wildlife sanctuary</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Lake Nakuru National Park</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="font-bold">4.6</span>
+                                <span class="text-gray-500 ml-1">(72 reviews)</span>
+                            </div>
+                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 5 -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1711802536772-0ef59886bc1b?q=80&w=1518&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lamu Cultural Tour" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Cultural</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Lamu Cultural Tour</h3>
+                            <div class="text-yellow-600 font-bold">$1,100</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">4 days experiencing the rich Swahili culture and heritage</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Lamu Island</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="font-bold">4.8</span>
+                                <span class="text-gray-500 ml-1">(92 reviews)</span>
+                            </div>
+                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 6 -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1692737422532-ce21c510a329?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hell's Gate Adventure" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Adventure</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Hell's Gate Adventure</h3>
+                            <div class="text-yellow-600 font-bold">$800</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">2 days of cycling and rock climbing in the dramatic gorges</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Hell's Gate National Park</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="font-bold">4.7</span>
+                                <span class="text-gray-500 ml-1">(64 reviews)</span>
+                            </div>
+                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 7 -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1592670129848-82e05b9193fe?q=80&w=1646&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Amboseli Safari" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Popular</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Amboseli Safari</h3>
+                            <div class="text-yellow-600 font-bold">$1,300</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">4 days of elephant watching with Mt. Kilimanjaro views</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Amboseli National Park</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="font-bold">4.9</span>
+                                <span class="text-gray-500 ml-1">(108 reviews)</span>
+                            </div>
+                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 8 -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1537976856963-b1166f2bb739?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tsavo Adventure" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Safari</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Tsavo Adventure</h3>
+                            <div class="text-yellow-600 font-bold">$1,100</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">5 days exploring Kenya's largest national park</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Tsavo East & West</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="font-bold">4.8</span>
+                                <span class="text-gray-500 ml-1">(88 reviews)</span>
+                            </div>
+                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#book" class="inline-block bg-black hover:bg-gray-800 text-yellow-500 hover:text-yellow-400 font-bold py-3 px-8 rounded-full transition duration-300">
+                    View All Packages <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 gold-text-gradient">Our Services</h2>
+                <p class="max-w-2xl mx-auto text-gray-300">Comprehensive travel solutions tailored to your needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition duration-300">
+                    <div class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-suitcase text-2xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Tour Packages</h3>
+                    <p class="text-gray-300">Customized tour packages including wildlife safaris, beach holidays, cultural tours, and adventure trips.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition duration-300">
+                    <div class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-hotel text-2xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Hotel Bookings</h3>
+                    <p class="text-gray-300">Exclusive deals on hotels, resorts, and lodges across Kenya with our partner network.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition duration-300">
+                    <div class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-car text-2xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Transportation</h3>
+                    <p class="text-gray-300">Reliable airport transfers, car rentals, and private chauffeur services throughout Kenya.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition duration-300">
+                    <div class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-tie text-2xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Guided Tours</h3>
+                    <p class="text-gray-300">Professional guides for city tours, historical sites, and nature excursions with deep local knowledge.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-gray-800 rounded-xl p-8">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8">
+                        <h3 class="text-2xl font-bold mb-4 gold-text-gradient">Custom Travel Planning</h3>
+                        <p class="text-gray-300 mb-4">Have a specific itinerary in mind? Our travel experts can create a completely customized trip tailored to your interests, budget, and schedule.</p>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Personalized itinerary design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>VIP experiences and special access</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Family-friendly and group travel options</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1368&q=80" alt="Custom Travel Planning" class="w-full rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Travel Gallery</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Explore Kenya through our travelers' eyes</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1577982787983-e07c6730f2d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1459&q=80" alt="Wildlife" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Maasai Mara Safari</h3>
+                        <p class="text-sm text-gray-600">Wildlife photography expedition</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Beach" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Diani Beach</h3>
+                        <p class="text-sm text-gray-600">Tropical paradise getaway</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1581431637513-1d0df3df8e6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mountain" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Mount Kenya</h3>
+                        <p class="text-sm text-gray-600">High altitude adventure</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1590845947676-fa2576f401d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Culture" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Maasai Village</h3>
+                        <p class="text-sm text-gray-600">Cultural immersion experience</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1498&q=80" alt="Lake" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Lake Nakuru</h3>
+                        <p class="text-sm text-gray-600">Flamingo watching tour</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Beach 2" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Watamu Beach</h3>
+                        <p class="text-sm text-gray-600">Marine park snorkeling</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Safari" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Samburu Reserve</h3>
+                        <p class="text-sm text-gray-600">Northern Kenya safari</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1368&q=80" alt="Adventure" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold">Hell's Gate</h3>
+                        <p class="text-sm text-gray-600">Biking and hiking adventure</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-black hover:bg-gray-800 text-yellow-500 hover:text-yellow-400 font-bold py-3 px-8 rounded-full transition duration-300">
+                    View More Photos <i class="fas fa-images ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">What Our Travelers Say</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Hear from our satisfied customers about their experiences with Evestar Tours</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="testimonial-card bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah J.</h4>
+                            <div class="flex items-center">
+                                <div class="flex">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The Maasai Mara safari organized by Evestar was absolutely incredible! Our guide was knowledgeable and we saw the Big Five within two days. The luxury tented camp was beyond expectations."</p>
+                    <div class="text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i> March 15, 2023
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="testimonial-card bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael T.</h4>
+                            <div class="flex items-center">
+                                <div class="flex">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"We booked a custom family vacation combining safari and beach. Evestar handled everything perfectly - from airport transfers to special dietary requests. The kids loved the marine park snorkeling!"</p>
+                    <div class="text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i> January 28, 2023
+                    </div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="testimonial-card bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Priya K." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Priya K.</h4>
+                            <div class="flex items-center">
+                                <div class="flex">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star-half-alt text-yellow-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The Mount Kenya trek was challenging but so rewarding. Our guides were professional and ensured our safety at all times. The views from Point Lenana at sunrise were worth every step!"</p>
+                    <div class="text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i> November 5, 2022
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-yellow-50 border border-yellow-100 rounded-xl p-8">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0 md:pr-8">
+                        <h3 class="text-2xl font-bold mb-4">Share Your Experience</h3>
+                        <p class="text-gray-600 mb-4">Have you traveled with Evestar Tours? We'd love to hear about your adventure!</p>
+                        <button class="bg-black hover:bg-gray-800 text-yellow-500 hover:text-yellow-400 font-bold py-3 px-6 rounded-full transition duration-300">
+                            Write a Review <i class="fas fa-pen ml-2"></i>
+                        </button>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center">
+                        <div class="w-32 h-32 gold-gradient rounded-full flex items-center justify-center">
+                            <i class="fas fa-quote-right text-4xl text-black"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 gold-text-gradient">Contact Us</h2>
+                <p class="max-w-2xl mx-auto text-gray-300">Get in touch with our travel experts to plan your perfect Kenyan adventure</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Send Us a Message</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block mb-1">First Name</label>
+                                <input type="text" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            </div>
+                            <div>
+                                <label class="block mb-1">Last Name</label>
+                                <input type="text" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block mb-1">Email</label>
+                            <input type="email" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label class="block mb-1">Phone</label>
+                            <input type="tel" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label class="block mb-1">Subject</label>
+                            <select class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                <option>General Inquiry</option>
+                                <option>Booking Question</option>
+                                <option>Custom Tour Request</option>
+                                <option>Feedback</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-1">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-yellow-600 hover:bg-yellow-700 text-black font-bold py-3 px-4 rounded transition duration-300">Send Message</button>
+                    </form>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Our Office</h4>
+                                <p class="text-gray-300">Evestar Tours and Travels<br>
+                                123 Uhuru Highway<br>
+                                Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-phone-alt text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Phone Numbers</h4>
+                                <p class="text-gray-300">+254 700 123456 (Office)<br>
+                                +254 711 987654 (Mobile)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-envelope text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email Addresses</h4>
+                                <p class="text-gray-300">info@evestartours.com<br>
+                                bookings@evestartours.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-clock text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Business Hours</h4>
+                                <p class="text-gray-300">Monday - Friday: 8:00 AM - 6:00 PM<br>
+                                Saturday: 9:00 AM - 4:00 PM<br>
+                                Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center text-black hover:bg-yellow-700 transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center text-black hover:bg-yellow-700 transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center text-black hover:bg-yellow-700 transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center text-black hover:bg-yellow-700 transition duration-300">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center">
+                            <span class="text-black font-bold text-xl">ET</span>
+                        </div>
+                        <span class="text-xl font-bold gold-text-gradient">Evestar Tours</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Kenya's premier tour operator offering unforgettable travel experiences since 2010.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 gold-text-gradient">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-yellow-500 transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-yellow-500 transition">About Us</a></li>
+                        <li><a href="#packages" class="text-gray-400 hover:text-yellow-500 transition">Tour Packages</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-yellow-500 transition">Services</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-yellow-500 transition">Gallery</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-yellow-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 gold-text-gradient">Popular Packages</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition">Maasai Mara Safari</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition">Diani Beach Retreat</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition">Mount Kenya Trek</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition">Amboseli Safari</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition">Lamu Cultural Tour</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition">Hell's Gate Adventure</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 gold-text-gradient">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for exclusive offers and travel inspiration.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 w-full">
+                        <button type="submit" class="bg-yellow-600 hover:bg-yellow-700 text-black px-4 py-2 rounded-r transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Evestar Tours and Travels. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-yellow-500 transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500 transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500 transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-yellow-600 text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-yellow-700 transition duration-300 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Highlight active navigation item
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('nav a');
+        
+        window.addEventListener('scroll', function() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active-nav');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active-nav');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
