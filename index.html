@@ -13,6 +13,23 @@
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
+
+         .gold-gradient {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+        }
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .package-card {
+            transition: all 0.3s ease;
+        }
         
         .gold-gradient {
             background: linear-gradient(135deg, #D4AF37 0%, #F9D423 100%);
@@ -194,15 +211,16 @@
     </section>
 
     <!-- Packages Section -->
+<!-- Packages Section -->
     <section id="packages" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">Our Popular Packages</h2>
+                <h2 class="text-4xl font-bold mb-4">Our Popular Packages</h2>
                 <p class="max-w-2xl mx-auto text-gray-600">Explore our carefully curated selection of Kenya's most exciting travel experiences</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Package 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+                <!-- Package 1: 3 Days Maasai Mara Safari -->
                 <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
                     <div class="relative">
                         <img src="https://plus.unsplash.com/premium_photo-1664302640765-d88c94bd04b7?q=80&w=685&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Maasai Mara Safari" class="w-full h-64 object-cover">
@@ -210,13 +228,13 @@
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-bold">Maasai Mara Safari</h3>
-                            <div class="text-yellow-600 font-bold">$1,200</div>
+                            <h3 class="text-xl font-bold">3 Days Maasai Mara Safari</h3>
+                            <div class="text-yellow-600 font-bold">$250</div>
                         </div>
-                        <p class="text-gray-600 mb-4">5 days exploring Kenya's most famous wildlife reserve with luxury tented accommodation</p>
+                        <p class="text-gray-600 mb-4">3 days exploring Kenya's most famous wildlife reserve with the Big Five and Great Wildebeest Migration</p>
                         <div class="flex items-center text-sm text-gray-500 mb-4">
                             <i class="fas fa-map-marker-alt mr-2"></i>
-                            <span>Maasai Mara, Kenya</span>
+                            <span>Maasai Mara National Reserve</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <div class="flex items-center">
@@ -224,65 +242,14 @@
                                 <span class="font-bold">4.9</span>
                                 <span class="text-gray-500 ml-1">(128 reviews)</span>
                             </div>
-                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                            <button class="view-details text-yellow-600 hover:text-yellow-700 font-semibold" data-package="mara3">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Package 2 -->
-                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Diani Beach Retreat" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-bold">Diani Beach Retreat</h3>
-                            <div class="text-yellow-600 font-bold">$950</div>
-                        </div>
-                        <p class="text-gray-600 mb-4">7 days of relaxation on Kenya's most beautiful white sand beaches</p>
-                        <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            <span>Diani Beach, Kenya</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex items-center">
-                                <i class="fas fa-star text-yellow-400 mr-1"></i>
-                                <span class="font-bold">4.8</span>
-                                <span class="text-gray-500 ml-1">(96 reviews)</span>
-                            </div>
-                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Package 3 -->
-                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1734521675504-8ab8dc380bbe?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mount Kenya Trek" class="w-full h-64 object-cover">
-                        <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Adventure</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-bold">Mount Kenya Trek</h3>
-                            <div class="text-yellow-600 font-bold">$1,500</div>
-                        </div>
-                        <p class="text-gray-600 mb-4">6 day challenging trek to Point Lenana with experienced guides</p>
-                        <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            <span>Mount Kenya National Park</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex items-center">
-                                <i class="fas fa-star text-yellow-400 mr-1"></i>
-                                <span class="font-bold">4.7</span>
-                                <span class="text-gray-500 ml-1">(84 reviews)</span>
-                            </div>
-                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Package 4 -->
+                <!-- Package 2: 3 Days Lake Nakuru Safari -->
                 <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1623745493572-ef78d94249f3?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lake Nakuru Safari" class="w-full h-64 object-cover">
@@ -290,10 +257,10 @@
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-bold">Lake Nakuru Safari</h3>
-                            <div class="text-yellow-600 font-bold">$900</div>
+                            <h3 class="text-xl font-bold">3 Days Lake Nakuru Safari</h3>
+                            <div class="text-yellow-600 font-bold">$390</div>
                         </div>
-                        <p class="text-gray-600 mb-4">3 days exploring the famous flamingo lake and wildlife sanctuary</p>
+                        <p class="text-gray-600 mb-4">3 days exploring the famous flamingo lake and rhino sanctuary in the Great Rift Valley</p>
                         <div class="flex items-center text-sm text-gray-500 mb-4">
                             <i class="fas fa-map-marker-alt mr-2"></i>
                             <span>Lake Nakuru National Park</span>
@@ -304,26 +271,144 @@
                                 <span class="font-bold">4.6</span>
                                 <span class="text-gray-500 ml-1">(72 reviews)</span>
                             </div>
-                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                            <button class="view-details text-yellow-600 hover:text-yellow-700 font-semibold" data-package="nakuru3">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Package 5 -->
+                <!-- Package 3: 3 Days Diani Beach Retreat -->
                 <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1711802536772-0ef59886bc1b?q=80&w=1518&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lamu Cultural Tour" class="w-full h-64 object-cover">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Diani Beach Retreat" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Beach</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">3 Days Diani Beach Retreat</h3>
+                            <div class="text-yellow-600 font-bold">$360</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">3 days of relaxation on Kenya's most beautiful white sand beaches on the South Coast</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Diani Beach, South Coast</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="font-bold">4.8</span>
+                                <span class="text-gray-500 ml-1">(96 reviews)</span>
+                            </div>
+                            <button class="view-details text-yellow-600 hover:text-yellow-700 font-semibold" data-package="diani3">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 4: 4 Days Mara-Nakuru Combo -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1734521675504-8ab8dc380bbe?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mara Nakuru Combo" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Combo</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">4 Days Mara-Nakuru Combo</h3>
+                            <div class="text-yellow-600 font-bold">$320</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">4 days combining Maasai Mara wildlife safari with Lake Nakuru flamingo watching</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Maasai Mara & Lake Nakuru</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="font-bold">4.8</span>
+                                <span class="text-gray-500 ml-1">(84 reviews)</span>
+                            </div>
+                            <button class="view-details text-yellow-600 hover:text-yellow-700 font-semibold" data-package="combo4">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 5: 5 Days Maasai Mara Safari -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1711802536772-0ef59886bc1b?q=80&w=1518&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="5 Days Maasai Mara" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Extended</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">5 Days Maasai Mara Safari</h3>
+                            <div class="text-yellow-600 font-bold">$940</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">5 days deep dive into Kenya's most iconic wilderness with optional balloon safari</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Maasai Mara National Reserve</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="font-bold">4.9</span>
+                                <span class="text-gray-500 ml-1">(156 reviews)</span>
+                            </div>
+                            <button class="view-details text-yellow-600 hover:text-yellow-700 font-semibold" data-package="mara5">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 6: 7 Days Diani Beach Retreat -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1692737422532-ce21c510a329?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="7 Days Diani Beach" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Extended</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">7 Days Diani Beach Retreat</h3>
+                            <div class="text-yellow-600 font-bold">$920</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Full week of sun, sea and serenity on palm-fringed shores of Diani Beach</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Diani Beach, South Coast</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="font-bold">4.9</span>
+                                <span class="text-gray-500 ml-1">(142 reviews)</span>
+                            </div>
+                            <button class="view-details text-yellow-600 hover:text-yellow-700 font-semibold" data-package="diani7">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 7: 4 Days Lamu Cultural Tour -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1592670129848-82e05b9193fe?q=80&w=1646&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lamu Cultural Tour" class="w-full h-64 object-cover">
                         <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Cultural</div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-bold">Lamu Cultural Tour</h3>
-                            <div class="text-yellow-600 font-bold">$1,100</div>
+                            <h3 class="text-xl font-bold">4 Days Lamu Cultural Tour</h3>
+                            <div class="text-yellow-600 font-bold">$480</div>
                         </div>
-                        <p class="text-gray-600 mb-4">4 days experiencing the rich Swahili culture and heritage</p>
+                        <p class="text-gray-600 mb-4">4 days exploring UNESCO World Heritage Swahili culture and architecture</p>
                         <div class="flex items-center text-sm text-gray-500 mb-4">
                             <i class="fas fa-map-marker-alt mr-2"></i>
-                            <span>Lamu Island</span>
+                            <span>Lamu Old Town & Archipelago</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <div class="flex items-center">
@@ -331,23 +416,25 @@
                                 <span class="font-bold">4.8</span>
                                 <span class="text-gray-500 ml-1">(92 reviews)</span>
                             </div>
-                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                            <button class="view-details text-yellow-600 hover:text-yellow-700 font-semibold" data-package="lamu4">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Package 6 -->
+                <!-- Package 8: 2 Days Hell's Gate Adventure -->
                 <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1692737422532-ce21c510a329?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hell's Gate Adventure" class="w-full h-64 object-cover">
+                        <img src="https://images.unsplash.com/photo-1537976856963-b1166f2bb739?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hell's Gate Adventure" class="w-full h-64 object-cover">
                         <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Adventure</div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-bold">Hell's Gate Adventure</h3>
-                            <div class="text-yellow-600 font-bold">$800</div>
+                            <h3 class="text-xl font-bold">2 Days Hell's Gate Adventure</h3>
+                            <div class="text-yellow-600 font-bold">$210</div>
                         </div>
-                        <p class="text-gray-600 mb-4">2 days of cycling and rock climbing in the dramatic gorges</p>
+                        <p class="text-gray-600 mb-4">2 days of cycling and hiking through dramatic gorges and geothermal features</p>
                         <div class="flex items-center text-sm text-gray-500 mb-4">
                             <i class="fas fa-map-marker-alt mr-2"></i>
                             <span>Hell's Gate National Park</span>
@@ -358,23 +445,25 @@
                                 <span class="font-bold">4.7</span>
                                 <span class="text-gray-500 ml-1">(64 reviews)</span>
                             </div>
-                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                            <button class="view-details text-yellow-600 hover:text-yellow-700 font-semibold" data-package="hellsgate2">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Package 7 -->
+                <!-- Package 9: 4 Days Amboseli Safari -->
                 <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1592670129848-82e05b9193fe?q=80&w=1646&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Amboseli Safari" class="w-full h-64 object-cover">
+                        <img src="https://images.unsplash.com/photo-1669215691367-2dd1138fc3c7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Amboseli Safari" class="w-full h-64 object-cover">
                         <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Popular</div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-bold">Amboseli Safari</h3>
-                            <div class="text-yellow-600 font-bold">$1,300</div>
+                            <h3 class="text-xl font-bold">4 Days Amboseli Safari</h3>
+                            <div class="text-yellow-600 font-bold">$680</div>
                         </div>
-                        <p class="text-gray-600 mb-4">4 days of elephant watching with Mt. Kilimanjaro views</p>
+                        <p class="text-gray-600 mb-4">4 days of elephant watching with stunning Mt. Kilimanjaro views</p>
                         <div class="flex items-center text-sm text-gray-500 mb-4">
                             <i class="fas fa-map-marker-alt mr-2"></i>
                             <span>Amboseli National Park</span>
@@ -385,34 +474,9 @@
                                 <span class="font-bold">4.9</span>
                                 <span class="text-gray-500 ml-1">(108 reviews)</span>
                             </div>
-                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Package 8 -->
-                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1537976856963-b1166f2bb739?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tsavo Adventure" class="w-full h-64 object-cover">
-                        <div class="absolute top-4 right-4 bg-yellow-600 text-black font-bold px-3 py-1 rounded-full">Safari</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-bold">Tsavo Adventure</h3>
-                            <div class="text-yellow-600 font-bold">$1,100</div>
-                        </div>
-                        <p class="text-gray-600 mb-4">5 days exploring Kenya's largest national park</p>
-                        <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            <span>Tsavo East & West</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex items-center">
-                                <i class="fas fa-star text-yellow-400 mr-1"></i>
-                                <span class="font-bold">4.8</span>
-                                <span class="text-gray-500 ml-1">(88 reviews)</span>
-                            </div>
-                            <a href="#book" class="text-yellow-600 hover:text-yellow-700 font-semibold">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                            <button class="view-details text-yellow-600 hover:text-yellow-700 font-semibold" data-package="amboseli4">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -425,6 +489,511 @@
             </div>
         </div>
     </section>
+
+    <!-- Package Detail Modal -->
+    <div id="packageModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-xl max-w-4xl w-full max-h-screen overflow-y-auto">
+                <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center">
+                    <h3 class="text-2xl font-bold" id="modalTitle"></h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <div id="modalContent"></div>
+                    <div class="mt-6 flex justify-center">
+                        <button class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                            Book This Package
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Package data
+        const packages = {
+            mara3: {
+                title: "3 Days, 2 Nights Maasai Mara Safari",
+                price: "$250",
+                destination: "Maasai Mara National Reserve",
+                description: "Maasai Mara is Kenya's most iconic wildlife reserve, famously known for the Great Wildebeest Migration—one of the 'Seven New Wonders of the World.' Located in the southwestern part of Kenya, it shares an open border with Tanzania's Serengeti, allowing massive herds of wildebeest, zebra, and antelope to freely roam.",
+                itinerary: [
+                    {
+                        day: "Day 1",
+                        title: "Nairobi to Maasai Mara – Into the Wild",
+                        description: "Depart Nairobi in the morning by road or flight to Maasai Mara. Along the way, enjoy sweeping views of the Great Rift Valley before arriving at your lodge or tented camp in time for lunch. After settling in, head out for your first afternoon game drive across the sunlit plains, where elephants, zebras, and prides of lions roam freely. As the sun sets, return to camp for a hearty dinner and a relaxing evening by the bonfire under the stars."
+                    },
+                    {
+                        day: "Day 2",
+                        title: "Full-Day Safari & Cultural Discovery",
+                        description: "Begin the day with an early morning game drive, the best time to spot predators on the hunt. After a bush breakfast in the savannah, you have the option to visit a traditional Maasai village to learn about their rich culture and way of life. Enjoy a picnic lunch in the wild before continuing your safari across different parts of the reserve, tracking wildlife such as cheetahs, giraffes, and if lucky, the elusive leopard."
+                    },
+                    {
+                        day: "Day 3",
+                        title: "Morning Safari & Return to Nairobi",
+                        description: "Enjoy one last game drive before breakfast, capturing the early activity of wildlife. After breakfast, check out and begin your journey back to Nairobi, arriving in the late afternoon with unforgettable memories of the African wilderness."
+                    }
+                ],
+                included: [
+                    "Transport in a custom safari cruiser (with pop-up roof for game viewing)",
+                    "2 nights' accommodation in a safari lodge or tented camp",
+                    "Meals on full board basis (breakfast, lunch, dinner)",
+                    "All scheduled game drives in Maasai Mara",
+                    "Night bonfires at the camp (weather-dependent)",
+                    "Unlimited drinking water during the safari",
+                    "Services of an English-speaking driver-guide"
+                ],
+                excluded: [
+                    "Park entry fees to Maasai Mara National Reserve",
+                    "Travel visas (where applicable)",
+                    "Tips and gratuities to guides, drivers, or camp staff",
+                    "Maasai Village visit"
+                ]
+            },
+            nakuru3: {
+                title: "3 Days, 2 Nights Lake Nakuru Safari",
+                price: "$390",
+                destination: "Lake Nakuru National Park",
+                description: "This short but scenic safari takes you to the heart of the Great Rift Valley—Lake Nakuru National Park. Known for its alkaline lake, flocks of flamingos, endangered rhinos, and the rare Rothschild's giraffe, Lake Nakuru offers a compact yet rich wildlife experience.",
+                itinerary: [
+                    {
+                        day: "Day 1",
+                        title: "Nairobi to Lake Nakuru – Into the Rift Valley",
+                        description: "Depart Nairobi in the morning and drive through the picturesque Great Rift Valley, enjoying panoramic views and a stopover at a viewpoint. Arrive at Lake Nakuru National Park before lunchtime. Check in to your lodge or tented camp and have lunch. In the afternoon, embark on your first game drive around the park's acacia woodlands, grassy plains, and lakeshore."
+                    },
+                    {
+                        day: "Day 2",
+                        title: "Full Day of Game Viewing in Lake Nakuru",
+                        description: "After breakfast, enjoy a full day of wildlife exploration in Lake Nakuru. The park is a haven for birdlife, especially flamingos and pelicans, and is one of the best places in Kenya to see rhinos in the wild. Explore the Baboon Cliff viewpoint for sweeping views of the lake and surrounding landscape."
+                    },
+                    {
+                        day: "Day 3",
+                        title: "Morning Safari & Return to Nairobi",
+                        description: "Start the day with an early morning game drive when the park is most active. After spotting some final wildlife and taking in the peaceful sunrise over the lake, return to the lodge for breakfast and check-out. Begin your drive back to Nairobi, arriving in the afternoon."
+                    }
+                ],
+                included: [
+                    "Transport in a custom safari cruiser (with pop-up roof for game viewing)",
+                    "2 nights' accommodation in Lake Nakuru lodges or tented camps",
+                    "Meals on full board basis (breakfast, lunch, dinner)",
+                    "Scheduled game drives in Lake Nakuru National Park",
+                    "Unlimited drinking water during the safari",
+                    "Services of a professional English-speaking driver-guide"
+                ],
+                excluded: [
+                    "Park entry fees to Lake Nakuru National Park",
+                    "Optional visits to Menengai Crater or Lake Naivasha",
+                    "Travel visas (if applicable)",
+                    "Tips and gratuities to guides, drivers, and lodge staff"
+                ]
+            },
+            diani3: {
+                title: "3 Days, 2 Nights Diani Beach Retreat",
+                price: "$360",
+                destination: "Diani Beach – South Coast, Kenya",
+                description: "Tucked away along Kenya's South Coast, Diani Beach is a tropical paradise known for its white sand beaches, turquoise waters, and swaying palm trees. Whether you're looking to relax after a safari, enjoy water sports, or simply soak up the sun, this 3-day beach retreat offers the perfect coastal escape.",
+                itinerary: [
+                    {
+                        day: "Day 1",
+                        title: "Arrival in Diani – Welcome to the Coast",
+                        description: "Upon arrival at Ukunda Airstrip or after a transfer from Mombasa, you'll be met and taken to your beach resort or boutique hotel in Diani. After check-in, spend the rest of the day at leisure—take a dip in the pool, walk along the pristine beach, or enjoy a cocktail under the palm trees."
+                    },
+                    {
+                        day: "Day 2",
+                        title: "Full Day of Relaxation or Optional Adventures",
+                        description: "After breakfast, enjoy a full day to relax or explore. Optional activities include snorkeling or diving at Kisite Mpunguti Marine Park, dhow sailing trip to Wasini Island with seafood lunch, jet skiing, paddleboarding, or spa treatments at your resort for the ultimate relaxation."
+                    },
+                    {
+                        day: "Day 3",
+                        title: "Morning by the Beach & Departure",
+                        description: "Enjoy a relaxed breakfast and a final swim before check-out. Depending on your departure time, you may have a few extra hours to soak in the sun. Transfer to Ukunda Airstrip or Mombasa for your return journey, carrying memories of Kenya's coastal charm."
+                    }
+                ],
+                included: [
+                    "2 nights' accommodation in a beach resort or boutique hotel in Diani",
+                    "Daily breakfast and dinner (half-board basis)",
+                    "Airport transfers to/from Ukunda Airstrip or Mombasa",
+                    "Unlimited access to hotel facilities (pool, beach, Wi-Fi)",
+                    "Assistance with activity bookings (on request)"
+                ],
+                excluded: [
+                    "Flights to/from Ukunda or Mombasa",
+                    "Lunch and drinks (unless staying at an all-inclusive resort)",
+                    "Optional excursions or water sports activities",
+                    "Travel insurance and personal expenses",
+                    "Tips and gratuities to hotel staff or guides"
+                ]
+            },
+            combo4: {
+                title: "4 Days, 3 Nights Maasai Mara – Lake Nakuru Safari",
+                price: "$320",
+                destination: "Maasai Mara & Lake Nakuru National Park",
+                description: "This safari offers the best of Kenya's wildlife in just four days. Maasai Mara is world-renowned for its rich concentration of wildlife and the Great Wildebeest Migration, while Lake Nakuru is a sanctuary for flamingos, white and black rhinos, and the endangered Rothschild's giraffe.",
+                itinerary: [
+                    {
+                        day: "Day 1",
+                        title: "Nairobi to Maasai Mara – Into the Wild",
+                        description: "Depart Nairobi in the morning and journey through the scenic Great Rift Valley. You arrive in Maasai Mara in time for lunch and check-in at your lodge or tented camp. Later in the afternoon, set out for your first game drive where you might spot elephants, lions, antelope, and giraffes roaming freely across the savannah."
+                    },
+                    {
+                        day: "Day 2",
+                        title: "Full-Day Safari in Maasai Mara",
+                        description: "Today is dedicated to exploring the vast plains of the Mara. With an early morning start, head out for a sunrise game drive followed by a bush breakfast. Search for the Big Five as well as cheetahs, hyenas, and hippos. A picnic lunch is served in the wild before continuing your afternoon game drive."
+                    },
+                    {
+                        day: "Day 3",
+                        title: "Maasai Mara to Lake Nakuru – From Savannah to Soda Lake",
+                        description: "After breakfast, bid farewell to the Mara and begin your drive to Lake Nakuru National Park. Arrive in time for lunch at the lodge near the park. In the afternoon, enjoy a game drive in Lake Nakuru, famous for its birdlife—especially flamingos—as well as rhinos, lions, zebras, and baboons."
+                    },
+                    {
+                        day: "Day 4",
+                        title: "Morning Game Drive & Return to Nairobi",
+                        description: "Start the day with a final early morning game drive inside Lake Nakuru. Capture views of the lake, acacia woodlands, and wildlife before returning to the lodge for breakfast. After check-out, drive back to Nairobi, arriving in the afternoon."
+                    }
+                ],
+                included: [
+                    "Transport in a custom safari cruiser (with pop-up roof for game viewing)",
+                    "3 nights' accommodation in selected safari lodges or camps",
+                    "Meals on full board basis (breakfast, lunch, dinner)",
+                    "Scheduled game drives in Maasai Mara and Lake Nakuru",
+                    "Night bonfires at the camps (weather-dependent)",
+                    "Unlimited drinking water during the safari",
+                    "Services of a professional English-speaking driver-guide"
+                ],
+                excluded: [
+                    "Park entry fees to Maasai Mara and Lake Nakuru",
+                    "Maasai Mara Village visit",
+                    "Travel visas (if applicable)",
+                    "Tips and gratuities to guides, drivers, and lodge staff"
+                ]
+            },
+            mara5: {
+                title: "5 Days, 4 Nights Maasai Mara Safari",
+                price: "$940",
+                destination: "Maasai Mara National Reserve",
+                description: "This five-day safari is a deep dive into Kenya's most iconic wilderness—Maasai Mara. Known for its breathtaking savannahs, predator sightings, and the legendary Great Wildebeest Migration (seasonal), this unforgettable safari experience includes extensive game drives, optional hot air balloon rides, and cultural visits.",
+                itinerary: [
+                    {
+                        day: "Day 1",
+                        title: "Nairobi to Maasai Mara – Welcome to the Wild",
+                        description: "Depart Nairobi in the morning and travel through the scenic Great Rift Valley with brief stops for photography. Arrive in Maasai Mara by midday and check in at your selected lodge or tented camp. After lunch and some relaxation, head out on your first evening game drive in the reserve."
+                    },
+                    {
+                        day: "Day 2",
+                        title: "Full-Day Safari Adventure in the Mara",
+                        description: "Start your day with an early breakfast before setting off on a full-day game drive with a packed picnic lunch. Explore different regions of the Mara in search of the Big Five as well as cheetahs, hyenas, and hippos along the rivers. Optional evening visit to a local Maasai village."
+                    },
+                    {
+                        day: "Day 3",
+                        title: "Sunrise Balloon Safari & Afternoon Leisure (Optional)",
+                        description: "For those seeking a magical experience, begin the day with a hot air balloon ride over the Mara at sunrise, followed by a champagne breakfast in the bush. Spend the rest of the day at leisure—relaxing at the lodge, enjoying the pool, or joining a short sunset game drive."
+                    },
+                    {
+                        day: "Day 4",
+                        title: "Morning Game Drive & Scenic Bush Walk",
+                        description: "Take an early morning game drive to catch predators before they retreat for the day. Return to the lodge for a hearty breakfast, then join a guided nature walk led by a Maasai naturalist. Learn about medicinal plants, animal tracks, and traditional survival techniques."
+                    },
+                    {
+                        day: "Day 5",
+                        title: "Final Game Drive & Return to Nairobi",
+                        description: "After breakfast, check out and begin your journey back to Nairobi. En route, enjoy a short game drive out of the park and optional stopovers at local markets or viewpoints along the Rift Valley. Arrive in Nairobi in the afternoon."
+                    }
+                ],
+                included: [
+                    "Transport in a custom safari cruiser (with pop-up roof)",
+                    "4 nights' accommodation in Maasai Mara safari lodges or luxury tented camps",
+                    "Meals on full board basis (breakfast, lunch, dinner)",
+                    "Scheduled game drives in Maasai Mara Reserve",
+                    "Optional cultural visit to a Maasai village",
+                    "Unlimited drinking water during the safari",
+                    "Services of a professional English-speaking driver-guide",
+                    "Bonfires at the camp (weather permitting)"
+                ],
+                excluded: [
+                    "Park entry fees to Maasai Mara National Reserve",
+                    "Hot air balloon safari (available at an additional cost)",
+                    "Travel visas (if applicable)",
+                    "Tips and gratuities to guides, drivers, and lodge staff"
+                ]
+            },
+            diani7: {
+                title: "7 Days, 6 Nights Diani Beach Retreat",
+                price: "$920",
+                destination: "Diani Beach – South Coast, Kenya",
+                description: "Indulge in a full week of sun, sea, and serenity on the palm-fringed shores of Diani Beach. This coastal escape is perfect for honeymooners, families, solo travelers, or anyone needing a break from the ordinary. Enjoy stunning sunsets, fine Swahili cuisine, and optional water adventures.",
+                itinerary: [
+                    {
+                        day: "Day 1",
+                        title: "Arrival in Diani – Paradise Begins",
+                        description: "Fly from Nairobi or transfer from Mombasa to Ukunda Airstrip, where you'll be met and transferred to your beach hotel or resort. After check-in, settle in with a welcome drink and enjoy your first evening on the Indian Ocean coast."
+                    },
+                    {
+                        day: "Day 2",
+                        title: "Relax & Unwind by the Ocean",
+                        description: "Start your retreat with a slow, peaceful day. Stroll along the soft white sands, swim in the warm sea, or lounge by the pool. Optional: book a beachside massage or explore nearby shops and cafes."
+                    },
+                    {
+                        day: "Day 3",
+                        title: "Dhow Sailing & Snorkeling Adventure (Optional)",
+                        description: "After breakfast, opt for a full-day excursion to Kisite Mpunguti Marine Park. Sail on a traditional Swahili dhow, snorkel in coral gardens, and enjoy a fresh seafood lunch on Wasini Island. Return by late afternoon."
+                    },
+                    {
+                        day: "Day 4",
+                        title: "Day at Leisure or Spa Experience",
+                        description: "Enjoy a slow morning followed by a spa treatment (optional) at your resort. For the active traveler, options like jet skiing, kite surfing, or a visit to Shimba Hills National Reserve for a coastal safari can be arranged."
+                    },
+                    {
+                        day: "Day 5",
+                        title: "Culture & Cuisine",
+                        description: "After a beach breakfast, take a guided tour to Kaya Kinondo Sacred Forest or visit a local craft market for souvenirs. In the evening, enjoy a romantic beach dinner or dine at one of Diani's top restaurants."
+                    },
+                    {
+                        day: "Day 6",
+                        title: "Final Full Day in Paradise",
+                        description: "Soak up your last full day in Diani. Spend it exactly as you wish—on the sand, in the sea, or exploring. Optional: go skydiving for a bird's-eye view of the coastline or take a sunset camel ride along the beach."
+                    },
+                    {
+                        day: "Day 7",
+                        title: "Check-Out & Departure",
+                        description: "After breakfast, check out and transfer to Ukunda Airstrip or Mombasa for your onward travel. Leave with a calm heart, a sun-kissed glow, and beautiful memories of Kenya's coast."
+                    }
+                ],
+                included: [
+                    "6 nights' accommodation in a beachfront resort or boutique hotel",
+                    "Daily breakfast and dinner (half-board basis)",
+                    "Return airport transfers from Ukunda or Mombasa",
+                    "Full use of hotel facilities (pool, gym, beach access)",
+                    "Assistance with tour bookings and local recommendations"
+                ],
+                excluded: [
+                    "Flights to/from Ukunda or Mombasa",
+                    "Lunches and drinks (unless staying at an all-inclusive resort)",
+                    "Optional excursions (snorkeling, dhow trips, water sports)",
+                    "Spa treatments and personal expenses",
+                    "Travel insurance and gratuities"
+                ]
+            },
+            lamu4: {
+                title: "4 Days, 3 Nights Lamu Cultural Tour",
+                price: "$480",
+                destination: "Lamu Old Town & Shela Village – Lamu Archipelago",
+                description: "Step back in time with a journey to Lamu, Kenya's oldest continually inhabited town and a UNESCO World Heritage Site. This 4-day cultural retreat offers an intimate experience of Swahili culture, architecture, traditional dhow sailing, and slow island life.",
+                itinerary: [
+                    {
+                        day: "Day 1",
+                        title: "Arrival in Lamu – Welcome to the Island",
+                        description: "Arrive at Manda Airport, where you'll be met and transferred by boat to your hotel or guesthouse in Lamu Old Town or Shela Village. After check-in, take a gentle walking tour through the narrow streets of Lamu, visiting historic Swahili homes, the Lamu Fort, and local artisan shops."
+                    },
+                    {
+                        day: "Day 2",
+                        title: "Cultural Heritage Tour & Sunset Dhow Cruise",
+                        description: "After breakfast, enjoy a deeper cultural exploration. Visit the Lamu Museum, Donkey Sanctuary, and meet local craftsmen who still practice traditional boat building and wood carving. In the late afternoon, board a traditional Swahili dhow for a sunset cruise—complete with snacks, drinks, and panoramic views."
+                    },
+                    {
+                        day: "Day 3",
+                        title: "Island Exploration & Shela Beach Relaxation",
+                        description: "Today is a mix of adventure and leisure. Take a boat ride to explore nearby islands such as Matondoni (famous for dhow making) or Takwa Ruins on Manda Island. Return to Shela Beach for a relaxed afternoon on the sand dunes or enjoy optional yoga or spa sessions."
+                    },
+                    {
+                        day: "Day 4",
+                        title: "Morning at Leisure & Departure",
+                        description: "Enjoy a slow morning with a final stroll along the beach or through Lamu's quiet alleyways. After breakfast, transfer by boat back to Manda Airport for your return flight, taking with you memories of Lamu's serene beauty and rich culture."
+                    }
+                ],
+                included: [
+                    "Return boat transfers from Manda Airport to Lamu Island",
+                    "3 nights' accommodation in a Swahili-style guesthouse or boutique hotel",
+                    "Daily breakfast and two dinners",
+                    "Guided walking tour of Lamu Old Town",
+                    "Sunset dhow sailing experience",
+                    "Entrance fees to Lamu Museum and Fort",
+                    "Local cultural guide services"
+                ],
+                excluded: [
+                    "Flights to/from Manda Airport (Lamu)",
+                    "Lunches and one dinner (to allow flexibility for personal choice)",
+                    "Optional excursions to nearby islands (can be arranged on-site)",
+                    "Personal expenses and souvenirs",
+                    "Tips and gratuities to guides and hotel staff"
+                ]
+            },
+            hellsgate2: {
+                title: "2 Days, 1 Night Hell's Gate Adventure",
+                price: "$210",
+                destination: "Hell's Gate National Park – Naivasha, Kenya",
+                description: "Get your adrenaline pumping with this short but thrilling adventure in Hell's Gate National Park, one of Kenya's most unique and dramatic landscapes. Known for its towering cliffs, geothermal features, and the rare opportunity to walk or cycle alongside wildlife.",
+                itinerary: [
+                    {
+                        day: "Day 1",
+                        title: "Nairobi to Hell's Gate – Cycling & Gorge Exploration",
+                        description: "Depart Nairobi in the morning and drive to Hell's Gate National Park, arriving by mid-morning. After a quick briefing, rent a bike and cycle through the park alongside zebras, giraffes, buffaloes, and antelopes. Stop for a guided walking tour of the gorge, where you'll explore narrow canyons, hot springs, and steam vents."
+                    },
+                    {
+                        day: "Day 2",
+                        title: "Lake Naivasha Boat Ride & Return to Nairobi",
+                        description: "After breakfast, head to Lake Naivasha for a peaceful morning boat ride. Glide past hippos and waterbirds as you take in views of Crescent Island and the Rift Valley escarpment. Optional walking safari on Crescent Island can be arranged. Return to Nairobi by afternoon."
+                    }
+                ],
+                included: [
+                    "Transport in a safari cruiser or private vehicle from Nairobi",
+                    "1 night's accommodation near Lake Naivasha (lodge or tented camp)",
+                    "All meals as mentioned (1 lunch, 1 dinner, 1 breakfast)",
+                    "Guided cycling tour of Hell's Gate National Park",
+                    "Park entry fees to Hell's Gate",
+                    "Boat ride on Lake Naivasha",
+                    "Services of an English-speaking guide/driver",
+                    "Bottled drinking water during excursions"
+                ],
+                excluded: [
+                    "Optional activities (e.g., Crescent Island walking safari)",
+                    "Bike rental fees (usually $10–$15 per person, on-site)",
+                    "Tips and gratuities to guides and lodge staff",
+                    "Personal expenses and items of a personal nature",
+                    "Travel insurance"
+                ]
+            },
+            amboseli4: {
+                title: "4 Days, 3 Nights Amboseli Safari",
+                price: "$680",
+                destination: "Amboseli National Park – Southern Kenya",
+                description: "Famous for its stunning views of Mount Kilimanjaro and large herds of elephants, Amboseli National Park offers one of Kenya's most iconic safari experiences. This 4-day itinerary combines thrilling game drives, bird watching, and cultural encounters with the Maasai community.",
+                itinerary: [
+                    {
+                        day: "Day 1",
+                        title: "Nairobi to Amboseli – Arrival & Afternoon Game Drive",
+                        description: "Depart Nairobi early morning and drive through the scenic foothills of the Great Rift Valley. Arrive at Amboseli National Park by midday. After lunch and check-in at your lodge or tented camp, head out for an afternoon game drive. Keep an eye out for large elephant herds, lions, zebras, and a variety of bird species."
+                    },
+                    {
+                        day: "Day 2",
+                        title: "Full Day Game Drives & Mount Kilimanjaro Views",
+                        description: "Start early with a morning game drive to catch predators in action and spot cheetahs, wildebeests, and buffalo grazing. Return to camp for lunch and a rest before an afternoon game drive to explore different areas of the park, including swamps and acacia woodlands. Don't miss the spectacular views of Mount Kilimanjaro as the sun sets."
+                    },
+                    {
+                        day: "Day 3",
+                        title: "Maasai Village Visit & Game Drive",
+                        description: "After breakfast, visit a traditional Maasai village to learn about their customs, culture, and lifestyle. Interact with the Maasai people, witness traditional dances, and shop for handcrafted souvenirs. After lunch, embark on another game drive in the park, focusing on areas rich in wildlife."
+                    },
+                    {
+                        day: "Day 4",
+                        title: "Morning Game Drive & Return to Nairobi",
+                        description: "Enjoy a final early morning game drive to catch the park's wildlife at their most active. Return to camp for breakfast and check-out. Begin your journey back to Nairobi, arriving by late afternoon with unforgettable memories of Amboseli's wild beauty."
+                    }
+                ],
+                included: [
+                    "Transport in a custom safari vehicle with pop-up roof for game viewing",
+                    "3 nights' accommodation in selected safari lodges or camps",
+                    "Meals on full board basis (breakfast, lunch, dinner)",
+                    "All park entrance fees to Amboseli National Park",
+                    "Scheduled game drives with professional English-speaking driver-guide",
+                    "Maasai village visit",
+                    "Unlimited drinking water during the safari"
+                ],
+                excluded: [
+                    "Flights to/from Nairobi (if applicable)",
+                    "Travel visas (if applicable)",
+                    "Tips and gratuities to guides, drivers, and lodge staff",
+                    "Personal expenses and optional activities"
+                ]
+            }
+        };
+
+        // Modal functionality
+        const modal = document.getElementById('packageModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const closeModalBtn = document.getElementById('closeModal');
+
+        // View details buttons
+        document.querySelectorAll('.view-details').forEach(button => {
+            button.addEventListener('click', function() {
+                const packageId = this.getAttribute('data-package');
+                const packageData = packages[packageId];
+                
+                if (packageData) {
+                    showPackageDetails(packageData);
+                }
+            });
+        });
+
+        // Close modal
+        closeModalBtn.addEventListener('click', function() {
+            modal.classList.add('hidden');
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+
+        function showPackageDetails(packageData) {
+            modalTitle.textContent = packageData.title;
+            
+            let content = `
+                <div class="mb-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-2xl font-bold text-yellow-600">${packageData.price}</h4>
+                            <p class="text-gray-600"><i class="fas fa-map-marker-alt mr-2"></i>${packageData.destination}</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">${packageData.description}</p>
+                </div>
+
+                <div class="mb-8">
+                    <h5 class="text-xl font-bold mb-4">Itinerary</h5>
+                    <div class="space-y-4">
+            `;
+            
+            packageData.itinerary.forEach(day => {
+                content += `
+                    <div class="border-l-4 border-yellow-500 pl-4">
+                        <h6 class="font-bold text-lg">${day.day}: ${day.title}</h6>
+                        <p class="text-gray-700 mt-2">${day.description}</p>
+                    </div>
+                `;
+            });
+
+            content += `
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h5 class="text-xl font-bold mb-4 text-green-600">What's Included</h5>
+                        <ul class="space-y-2">
+            `;
+            
+            packageData.included.forEach(item => {
+                content += `<li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i><span class="text-gray-700">${item}</span></li>`;
+            });
+
+            content += `
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-xl font-bold mb-4 text-red-600">What's Not Included</h5>
+                        <ul class="space-y-2">
+            `;
+            
+            packageData.excluded.forEach(item => {
+                content += `<li class="flex items-start"><i class="fas fa-times text-red-500 mt-1 mr-3"></i><span class="text-gray-700">${item}</span></li>`;
+            });
+
+            content += `
+                        </ul>
+                    </div>
+                </div>
+            `;
+            
+            modalContent.innerHTML = content;
+            modal.classList.remove('hidden');
+        }
+    </script>
 
     <!-- Services Section -->
     <section id="services" class="py-16 bg-gray-900 text-white">
