@@ -508,14 +508,19 @@
                 <div class="p-6">
                     <div id="modalContent"></div>
                     <div class="mt-6 flex justify-center">
-                        <button class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
-                            Book This Package
-                        </button>
+    <a href="#book">
+  <button id="bookThisPackageBtn" type="button" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+    Book This Package
+  </button>
+</a>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    
 
     <script>
         // Package data
@@ -1528,6 +1533,46 @@
                 }
             });
         });
+
+
+document.getElementById('bookThisPackageBtn')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    // Show popup
+    document.getElementById('bookingPopup').classList.remove('hidden');
+    // Scroll to booking form
+    const bookSection = document.getElementById('book');
+    if (bookSection) {
+        window.scrollTo({
+            top: bookSection.offsetTop - 80,
+            behavior: 'smooth'
+        });
+    }
+});// ...existing code...
+document.getElementById('bookThisPackageBtn')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    // Close the popup if open
+    document.getElementById('packageModal')?.classList.add('hidden');
+    // Scroll to booking form
+    const bookSection = document.getElementById('book');
+    if (bookSection) {
+        window.scrollTo({
+            top: bookSection.offsetTop - 80,
+            behavior: 'smooth'
+        });
+    }
+});
+// ...existing code...
+// Close popup
+document.getElementById('closeBookingPopup')?.addEventListener('click', function() {
+    document.getElementById('bookingPopup').classList.add('hidden');
+});
+
+// Optional: Close popup when clicking outside the modal
+document.getElementById('bookingPopup')?.addEventListener('click', function(e) {
+    if (e.target === this) {
+        this.classList.add('hidden');
+    }
+});
     </script>
 </body>
 </html>
